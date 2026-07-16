@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,6 +7,11 @@
     android:layout_height="match_parent"
     android:background="#F5F7FA">
 
+<<<<<<< HEAD
+=======
+    <!-- Logo -->
+
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="90dp"
@@ -14,7 +20,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         android:layout_marginTop="60dp"/>
+=======
+        android:layout_marginTop="50dp"/>
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
 
     <TextView
         android:id="@+id/txtLogo"
@@ -23,9 +33,14 @@
         android:text="GYMRAT"
         android:textSize="34sp"
         android:textStyle="bold"
+<<<<<<< HEAD
         android:letterSpacing="0.05"
         android:textColor="#1A1A1A"
         android:layout_marginTop="14dp"
+=======
+        android:textColor="#222222"
+        android:layout_marginTop="12dp"
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
         app:layout_constraintTop_toBottomOf="@id/imgLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -35,23 +50,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Train • Progress • Repeat"
+<<<<<<< HEAD
         android:textSize="14sp"
         android:letterSpacing="0.03"
         android:textColor="#9AA0A6"
+=======
+        android:textSize="15sp"
+        android:textColor="#757575"
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
         android:layout_marginTop="6dp"
         app:layout_constraintTop_toBottomOf="@id/txtLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+<<<<<<< HEAD
+=======
+    <!-- Card Login -->
+
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
+<<<<<<< HEAD
         android:layout_marginTop="36dp"
         app:cardCornerRadius="28dp"
         app:cardElevation="10dp"
         app:cardBackgroundColor="#FFFFFF"
+=======
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
         app:layout_constraintTop_toBottomOf="@id/txtSlogan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -60,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+<<<<<<< HEAD
             android:padding="28dp">
 
             <TextView
@@ -92,11 +124,21 @@
                 app:boxStrokeColor="#FF6B00"
                 app:hintTextColor="#FF6B00">
 
+=======
+            android:padding="24dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico">
+
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"/>
+<<<<<<< HEAD
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,5 +219,54 @@
             android:textSize="14sp"/>
 
     </LinearLayout>
+=======
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:hint="Contraseña"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:text="Entrar"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:backgroundTint="#FF6B00"
+                app:cornerRadius="18dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txtRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear una cuenta"
+        android:textStyle="bold"
+        android:textColor="#FF6B00"
+        android:textSize="15sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/cardLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+>>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
