@@ -26,32 +26,23 @@ public class RutinasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rutina);
 
-
         rvRutinas = findViewById(R.id.rvRutinas);
         fabAgregar = findViewById(R.id.fabAgregarRutina);
         navigation = findViewById(R.id.bottomNavigation);
-
-
         // Configurar RecyclerView
         rvRutinas.setLayoutManager(new LinearLayoutManager(this));
 
-
         // Datos estáticos
         ArrayList<String> rutinas = new ArrayList<>();
-
         rutinas.add("Push");
         rutinas.add("Pull");
         rutinas.add("Legs");
 
-
         // Crear adapter
         RutinaAdapter adapter = new RutinaAdapter(rutinas);
 
-
         // Mostrar rutinas
         rvRutinas.setAdapter(adapter);
-
-
 
         fabAgregar.setOnClickListener(v -> {
             // Abrir CrearRutinaActivity

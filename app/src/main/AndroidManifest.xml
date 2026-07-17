@@ -26,7 +26,6 @@
         <activity
             android:name=".Activities.LoginActivity"
             android:exported="false"/>
-<<<<<<< HEAD
 
         <activity
             android:name=".Activities.RegisterActivity"
@@ -37,11 +36,10 @@
             android:exported="false"/>
         <activity android:name=".Activities.PerfilActivity"
             android:exported="false"/>
-
-
-
-=======
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
+        <activity android:name=".Activities.EntrenamientoActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.ProgresoActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

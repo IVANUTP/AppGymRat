@@ -7,11 +7,9 @@
     android:layout_height="match_parent"
     android:background="#F5F7FA">
 
-<<<<<<< HEAD
-=======
-    <!-- Logo -->
 
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
+    <!-- LOGO -->
+
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="90dp"
@@ -20,11 +18,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        android:layout_marginTop="60dp"/>
-=======
-        android:layout_marginTop="50dp"/>
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
+        android:layout_marginTop="55dp"/>
+
+
+    <!-- NOMBRE APP -->
 
     <TextView
         android:id="@+id/txtLogo"
@@ -33,66 +30,52 @@
         android:text="GYMRAT"
         android:textSize="34sp"
         android:textStyle="bold"
-<<<<<<< HEAD
-        android:letterSpacing="0.05"
         android:textColor="#1A1A1A"
+        android:letterSpacing="0.05"
         android:layout_marginTop="14dp"
-=======
-        android:textColor="#222222"
-        android:layout_marginTop="12dp"
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
         app:layout_constraintTop_toBottomOf="@id/imgLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <!-- SLOGAN -->
 
     <TextView
         android:id="@+id/txtSlogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Train • Progress • Repeat"
-<<<<<<< HEAD
         android:textSize="14sp"
-        android:letterSpacing="0.03"
         android:textColor="#9AA0A6"
-=======
-        android:textSize="15sp"
-        android:textColor="#757575"
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
+        android:letterSpacing="0.03"
         android:layout_marginTop="6dp"
         app:layout_constraintTop_toBottomOf="@id/txtLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-<<<<<<< HEAD
-=======
-    <!-- Card Login -->
 
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
+    <!-- CARD LOGIN -->
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-<<<<<<< HEAD
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="35dp"
         app:cardCornerRadius="28dp"
         app:cardElevation="10dp"
         app:cardBackgroundColor="#FFFFFF"
-=======
-        android:layout_marginTop="40dp"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="8dp"
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
         app:layout_constraintTop_toBottomOf="@id/txtSlogan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-<<<<<<< HEAD
             android:padding="28dp">
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,14 +85,19 @@
                 android:textStyle="bold"
                 android:textColor="#1A1A1A"/>
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="20dp"
                 android:text="Ingresa tus datos para continuar"
                 android:textSize="13sp"
-                android:textColor="#9AA0A6"/>
+                android:textColor="#9AA0A6"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"/>
+
+
+
+            <!-- EMAIL -->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -120,27 +108,21 @@
                 app:boxCornerRadiusTopStart="14dp"
                 app:boxCornerRadiusTopEnd="14dp"
                 app:boxCornerRadiusBottomStart="14dp"
-                app:boxCornerRadiusBottomEnd="14dp"
-                app:boxStrokeColor="#FF6B00"
-                app:hintTextColor="#FF6B00">
+                app:boxCornerRadiusBottomEnd="14dp">
 
-=======
-            android:padding="24dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Correo electrónico">
-
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etCorreo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"/>
-<<<<<<< HEAD
+
 
             </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!-- PASSWORD -->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -153,9 +135,8 @@
                 app:boxCornerRadiusTopStart="14dp"
                 app:boxCornerRadiusTopEnd="14dp"
                 app:boxCornerRadiusBottomStart="14dp"
-                app:boxCornerRadiusBottomEnd="14dp"
-                app:boxStrokeColor="#FF6B00"
-                app:hintTextColor="#FF6B00">
+                app:boxCornerRadiusBottomEnd="14dp">
+
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
@@ -163,110 +144,78 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"/>
 
+
             </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!-- OLVIDASTE -->
 
             <TextView
                 android:id="@+id/txtOlvide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="10dp"
                 android:text="¿Olvidaste tu contraseña?"
                 android:textSize="12sp"
-                android:textColor="#9AA0A6"/>
+                android:textColor="#FF6B00"
+                android:layout_gravity="end"
+                android:layout_marginTop="12dp"/>
+
+
+
+            <!-- BOTON -->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="24dp"
                 android:text="Entrar"
-                android:textAllCaps="false"
-                android:textStyle="bold"
                 android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_marginTop="24dp"
                 app:backgroundTint="#FF6B00"
-                app:cornerRadius="18dp"
-                app:elevation="4dp"/>
+                app:cornerRadius="18dp"/>
+
 
         </LinearLayout>
 
+
     </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!-- REGISTRO -->
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="28dp"
         app:layout_constraintTop_toBottomOf="@id/cardLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿No tienes cuenta? "
-            android:textSize="14sp"
-            android:textColor="#757575"/>
+            android:textColor="#757575"
+            android:textSize="14sp"/>
+
 
         <TextView
             android:id="@+id/txtRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regístrate"
-            android:textStyle="bold"
             android:textColor="#FF6B00"
+            android:textStyle="bold"
             android:textSize="14sp"/>
 
+
     </LinearLayout>
-=======
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:hint="Contraseña"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="28dp"
-                android:text="Entrar"
-                android:textAllCaps="false"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                app:backgroundTint="#FF6B00"
-                app:cornerRadius="18dp"/>
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:id="@+id/txtRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crear una cuenta"
-        android:textStyle="bold"
-        android:textColor="#FF6B00"
-        android:textSize="15sp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/cardLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
->>>>>>> 6efa31edf0083443c77a5059605931784a1f614a
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
