@@ -4,10 +4,13 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gymrat.Adapters.EstadisticaAdapter;
+import com.example.gymrat.Adapters.HistorialAdapter;
 import com.example.gymrat.Models.Estadistica;
+import com.example.gymrat.Models.Historial;
 import com.example.gymrat.R;
 import com.example.gymrat.Utils.BottomNavHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,6 +20,7 @@ import java.util.ArrayList;
 public class ProgresoActivity extends AppCompatActivity {
 
     private RecyclerView rvEstadisticas;
+    private RecyclerView rvHistorial;
     private BottomNavigationView navigation;
 
     @Override
@@ -58,6 +62,42 @@ public class ProgresoActivity extends AppCompatActivity {
         EstadisticaAdapter adapter = new EstadisticaAdapter(lista);
 
         rvEstadisticas.setAdapter(adapter);
+        rvHistorial = findViewById(R.id.rvHistorial);
+
+        rvHistorial.setLayoutManager(new LinearLayoutManager(this));
+
+        ArrayList<Historial> historial = new ArrayList<>();
+
+        historial.add(new Historial(
+                "18",
+                "JUL",
+                "Push",
+                "1h 18 min",
+                "7250 kg",
+                "+8%"
+        ));
+
+        historial.add(new Historial(
+                "16",
+                "JUL",
+                "Pierna",
+                "1h 42 min",
+                "11200 kg",
+                "+15%"
+        ));
+
+        historial.add(new Historial(
+                "14",
+                "JUL",
+                "Espalda",
+                "1h 12 min",
+                "6900 kg",
+                "+6%"
+        ));
+
+        HistorialAdapter historialAdapter = new HistorialAdapter(historial);
+
+        rvHistorial.setAdapter(historialAdapter);
 
         BottomNavHelper.setupBottomNav(
                 this,
