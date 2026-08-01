@@ -14,6 +14,7 @@
 
         <activity
             android:name=".SplashActivity"
+            android:theme="@style/Theme.GymRat.Splash"
             android:exported="true">
 
             <intent-filter>
@@ -30,16 +31,25 @@
         <activity
             android:name=".Activities.RegisterActivity"
             android:exported="false"/>
+
         <activity android:name=".Activities.HomeActivity"
             android:exported="false"/>
+
         <activity android:name=".Activities.RutinasActivity"
             android:exported="false"/>
+
         <activity android:name=".Activities.PerfilActivity"
             android:exported="false"/>
+
         <activity android:name=".Activities.EntrenamientoActivity"
             android:exported="false"/>
+
         <activity android:name=".Activities.ProgresoActivity"
             android:exported="false"/>
+        <activity
+            android:name=".Activities.WelcomeActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
