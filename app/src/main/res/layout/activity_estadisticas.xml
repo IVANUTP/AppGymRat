@@ -11,6 +11,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,52 +21,56 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="30dp">
+            android:orientation="vertical">
 
             <!-- HEADER -->
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#FF6B00"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header_curvo"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="36dp"
+                android:paddingBottom="64dp">
 
                 <TextView
-                    android:text="Mi progreso"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="Mi progreso"
+                    android:textColor="#FFE3CC"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.02"/>
 
                 <TextView
                     android:id="@+id/txtPesoActual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:text="73 kg"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="42sp"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="44sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:text="Objetivo 80 kg"
-                    android:textColor="#FFE9D8"
-                    android:textSize="15sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Objetivo: 80 kg"
+                    android:textColor="#FFE3CC"
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
-            <!-- PROGRESO -->
-
+            <!-- PROGRESO (superpuesta al header, mismo lenguaje visual que Perfil) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="20dp">
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="-40dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -72,67 +78,154 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:text="Progreso hacia tu objetivo"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Progreso hacia tu objetivo"
+                            android:textColor="#1A1A1A"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/txtPorcentaje"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="75%"
+                            android:textColor="#FF6B00"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
 
                     <com.google.android.material.progressindicator.LinearProgressIndicator
                         android:id="@+id/progresoPeso"
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
-                        android:layout_marginTop="15dp"
-                        android:progress="75"/>
+                        android:layout_marginTop="14dp"
+                        android:progress="75"
+                        app:trackColor="#FFE3CC"
+                        app:trackCornerRadius="5dp"
+                        app:indicatorColor="#FF6B00"/>
 
                     <TextView
-                        android:id="@+id/txtPorcentaje"
-                        android:text="75%"
-                        android:textStyle="bold"
-                        android:textColor="#FF6B00"
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Te faltan 7 kg para llegar a tu objetivo"
+                        android:textColor="#9AA0A6"
+                        android:textSize="12sp"/>
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <!-- ESTADÍSTICAS -->
-
             <TextView
-                android:text="Estadísticas"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="10dp"
+                android:text="Estadísticas"
+                android:textColor="#1A1A1A"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvEstadisticas"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"/>
+                android:layout_marginHorizontal="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEstadisticas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="6dp"
+                    android:nestedScrollingEnabled="false"/>
+
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- HISTORIAL -->
-
             <TextView
-                android:text="Historial"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="10dp"
+                android:text="Historial"
+                android:textColor="#1A1A1A"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvHistorial"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"/>
+                android:layout_marginHorizontal="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- ESTADO VACÍO: mostrar/ocultar por código -->
+                    <LinearLayout
+                        android:id="@+id/emptyStateHistorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="28dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_chart"
+                            android:alpha="0.3"
+                            android:contentDescription="@null"
+                            app:tint="#9AA0A6"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Todavía no registraste tu peso"
+                            android:textColor="#1A1A1A"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="Tocá + para agregar tu primer registro"
+                            android:textColor="#9AA0A6"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHistorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp"
+                        android:nestedScrollingEnabled="false"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
@@ -148,6 +241,19 @@
         app:itemTextColor="@color/nav_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- BOTON AGREGAR REGISTRO DE PESO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAgregarPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_add"
+        app:tint="#FFFFFF"
+        app:backgroundTint="#FF6B00"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

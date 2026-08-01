@@ -9,6 +9,8 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="110dp"
         android:fillViewport="true">
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,12 +39,12 @@
 
             </LinearLayout>
 
-
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="25dp"
+                app:cardElevation="8dp"
                 app:cardBackgroundColor="#FF6B00">
 
                 <LinearLayout
@@ -61,6 +63,7 @@
                         android:id="@+id/txtCantidadRutinas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="3"
                         android:textColor="#FFFFFF"
                         android:textSize="34sp"
@@ -69,14 +72,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Empieza tu entrenamiento de hoy."
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FFE3CC"
                         android:textSize="14sp"/>
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
-            <!-- TITULO LISTA -->
 
+            <!-- TITULO LISTA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,18 +90,55 @@
                 android:textSize="18sp"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
-            <!-- AQUI APARECEN TUS RUTINAS -->
 
+            <!-- ESTADO VACÍO (mostrar/ocultar por código según haya rutinas o no) -->
+            <LinearLayout
+                android:id="@+id/emptyStateRutinas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_fitness"
+                    android:alpha="0.3"
+                    android:contentDescription="@null"
+                    app:tint="#9AA0A6"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Todavía no tenés rutinas"
+                    android:textColor="#1A1A1A"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Tocá el botón + para crear tu primera rutina"
+                    android:textColor="#9AA0A6"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- AQUI APARECEN TUS RUTINAS -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvRutinas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="100dp"
                 android:nestedScrollingEnabled="false"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-    <!-- MENU INFERIOR -->
 
+    <!-- MENU INFERIOR -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
@@ -114,9 +155,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_fitness"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/ic_add"
+        app:tint="#FFFFFF"
         app:backgroundTint="#FF6B00"/>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -9,13 +9,14 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="88dp"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="24dp">
+            android:orientation="vertical">
 
             <!-- HEADER CON GRADIENTE -->
             <LinearLayout
@@ -37,9 +38,7 @@
                         android:id="@+id/imgPerfil"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="4dp"
                         android:src="@drawable/ic_person"
-                        android:background="@drawable/ic_perfil_background"
                         android:scaleType="centerCrop" />
                 </androidx.cardview.widget.CardView>
 
@@ -57,17 +56,24 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/bg_badge_nivel"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="14dp"
                     android:paddingVertical="6dp">
 
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_fitness"
+                        app:tint="#FF6B00" />
+
                     <TextView
                         android:id="@+id/txtNivel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
                         android:text="Nivel 15 · Intermedio"
                         android:textColor="#FF6B00"
                         android:textSize="13sp"
@@ -260,6 +266,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:id="@+id/btnEditarPerfil"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -287,7 +294,7 @@
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
-                            android:src="@drawable/ic_fitness"
+                            android:src="@drawable/ic_chevron_right"
                             app:tint="#CCCCCC" />
                     </LinearLayout>
 
@@ -298,6 +305,7 @@
                         android:background="#F0F0F0" />
 
                     <LinearLayout
+                        android:id="@+id/btnConfiguracion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -325,11 +333,30 @@
                         <ImageView
                             android:layout_width="18dp"
                             android:layout_height="18dp"
-                            android:src="@drawable/ic_edit"
+                            android:src="@drawable/ic_chevron_right"
                             app:tint="#CCCCCC" />
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:text="Cerrar sesión"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FF3B30"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_logout"
+                app:iconTint="#FF3B30"
+                app:iconGravity="textStart"
+                app:strokeColor="#FF3B30"
+                app:strokeWidth="1.5dp"
+                app:cornerRadius="18dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
