@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<com.google.android.material.card.MaterialCardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="12dp"
-    app:cardCornerRadius="18dp"
-    app:cardElevation="3dp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="18dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
 
         <!-- Fecha -->
-
         <LinearLayout
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="#FFF2E8"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_fecha_historial"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -30,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18"
-                android:textSize="22sp"
+                android:textSize="19sp"
                 android:textStyle="bold"
                 android:textColor="#FF6B00"/>
 
@@ -39,16 +38,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="JUL"
-                android:textColor="#888888"/>
+                android:textSize="11sp"
+                android:textColor="#FF6B00"
+                android:letterSpacing="0.05"/>
         </LinearLayout>
 
         <!-- Información -->
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="14dp"
             android:orientation="vertical">
 
             <TextView
@@ -56,34 +56,89 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Push"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"/>
 
-            <TextView
-                android:id="@+id/txtDuracion"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1h 20 min"/>
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/txtVolumen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Volumen: 7,250 kg"/>
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_clock"
+                    android:contentDescription="@null"
+                    app:tint="#9AA0A6"/>
 
+                <TextView
+                    android:id="@+id/txtDuracion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="1h 20 min"
+                    android:textSize="12sp"
+                    android:textColor="#9AA0A6"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:text="·"
+                    android:textSize="12sp"
+                    android:textColor="#9AA0A6"/>
+
+                <TextView
+                    android:id="@+id/txtVolumen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7,250 kg"
+                    android:textSize="12sp"
+                    android:textColor="#9AA0A6"/>
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Mejora -->
-
-        <TextView
-            android:id="@+id/txtMejora"
+        <LinearLayout
+            android:id="@+id/badgeMejora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+8%"
-            android:textColor="#16A34A"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
+            android:background="@drawable/bg_badge_mejora_positiva"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <ImageView
+                android:id="@+id/iconoTendencia"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_trend_up"
+                android:contentDescription="@null"
+                app:tint="#16A34A"/>
+
+            <TextView
+                android:id="@+id/txtMejora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="8%"
+                android:textColor="#16A34A"
+                android:textStyle="bold"
+                android:textSize="13sp"/>
+        </LinearLayout>
 
     </LinearLayout>
 
-</com.google.android.material.card.MaterialCardView>
+    <!-- Divisor (ocultar en el último item del adapter con getItemCount()-1) -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="86dp"
+        android:background="#F0F0F0"/>
+
+</LinearLayout>
