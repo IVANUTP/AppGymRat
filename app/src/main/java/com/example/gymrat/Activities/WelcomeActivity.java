@@ -5,7 +5,6 @@ import static androidx.core.content.ContextCompat.startActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.gymrat.BaseActivity;
 import com.example.gymrat.R;
 import com.google.android.material.button.MaterialButton;
 

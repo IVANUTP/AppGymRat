@@ -1,4 +1,4 @@
-package com.example.gymrat;
+package com.example.gymrat.Activities;
 
 import android.os.Bundle;
 
