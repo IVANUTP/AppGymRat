@@ -49,6 +49,18 @@
         <activity
             android:name=".Activities.WelcomeActivity"
             android:exported="false"/>
+        <activity android:name=".Activities.OnboardingActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.PreEncuestaActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.PreguntaNombreActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.PreguntaExperienciaActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.PreguntaMetaActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.PreguntaSexoActivity"
+            android:exported="false"/>
 
     </application>
 

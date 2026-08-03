@@ -20,7 +20,7 @@ public class WelcomeActivity extends BaseActivity {
 
         // Ir a registro
         btnEmpezar.setOnClickListener(v -> {
-            Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(WelcomeActivity.this, OnboardingActivity.class );
             startActivity(intent);
         });
 
