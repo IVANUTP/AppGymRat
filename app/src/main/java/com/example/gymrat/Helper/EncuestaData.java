@@ -3,10 +3,11 @@ package com.example.gymrat.Helper;
 public class EncuestaData {
 
     private static EncuestaData instancia;
-
     private String nombre;
     private String experiencia;
-    private String meta;private String sexo;
+    private String meta;
+    private String sexo;
+    private Long idObjetivo;
 
 
 
@@ -29,4 +30,12 @@ public class EncuestaData {
     public void setMeta(String meta) { this.meta = meta; }
     public String getSexo() { return sexo; }
     public void setSexo(String sexo) { this.sexo = sexo; }
+
+    public Long getIdObjetivo() {
+        return idObjetivo;
+    }
+
+    public void setIdObjetivo(Long idObjetivo) {
+        this.idObjetivo = idObjetivo;
+    }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="240dp"
+    android:viewportWidth="120"
+    android:viewportHeight="240">
+
+    <!-- cabeza -->
+    <path android:fillColor="#D9D9D9" android:pathData="M60,8 C68,8 74,15 74,24 C74,33 68,40 60,40 C52,40 46,33 46,24 C46,15 52,8 60,8 Z"/>
+    <!-- torso -->
+    <path android:fillColor="#D9D9D9" android:pathData="M40,44 L80,44 L84,110 L36,110 Z"/>
+    <!-- brazos -->
+    <path android:fillColor="#D9D9D9" android:pathData="M36,48 L22,100 L30,104 L42,54 Z"/>
+    <path android:fillColor="#D9D9D9" android:pathData="M84,48 L98,100 L90,104 L78,54 Z"/>
+    <!-- antebrazos/manos -->
+    <path android:fillColor="#D9D9D9" android:pathData="M22,100 L16,140 L26,142 L32,104 Z"/>
+    <path android:fillColor="#D9D9D9" android:pathData="M98,100 L104,140 L94,142 L88,104 Z"/>
+    <!-- piernas -->
+    <path android:fillColor="#D9D9D9" android:pathData="M42,110 L38,200 L54,200 L58,112 Z"/>
+    <path android:fillColor="#D9D9D9" android:pathData="M78,110 L82,200 L66,200 L62,112 Z"/>
+    <!-- pies -->
+    <path android:fillColor="#D9D9D9" android:pathData="M38,200 L34,214 L56,214 L54,200 Z"/>
+    <path android:fillColor="#D9D9D9" android:pathData="M82,200 L86,214 L64,214 L66,200 Z"/>
+
+</vector>

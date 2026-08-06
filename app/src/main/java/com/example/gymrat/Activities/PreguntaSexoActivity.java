@@ -37,7 +37,7 @@ public class PreguntaSexoActivity extends BaseActivity {
         btnSiguiente.setOnClickListener(v -> {
             EncuestaData.getInstancia().setSexo(seleccionActual);
 
-            Intent intent = new Intent(PreguntaSexoActivity.this, PreguntaExperienciaActivity.class);
+            Intent intent = new Intent(PreguntaSexoActivity.this,  SeleccionMusculosActivity.class);
             startActivity(intent);
         });
     }

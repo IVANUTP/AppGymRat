@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/volver"
+            app:tint="#1A1A1A"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="20dp"
+            android:progress="20"
+            app:trackColor="#E8E8E8"
+            app:trackCornerRadius="4dp"
+            app:indicatorColor="#FF6B00"
+            app:layout_constraintTop_toBottomOf="@id/btnVolver"
+            app:layout_constraintStart_toEndOf="@id/btnVolver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnVolver"/>
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Selecciona las áreas en las que quieres concentrarte"
+            android:textColor="#1A1A1A"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintTop_toBottomOf="@id/btnVolver"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- CHIPS -->
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/contenedorChips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            app:flexWrap="wrap"
+            app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/chipEspalda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Espalda"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipHombro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Hombro"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipBrazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Brazo"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipPecho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Pecho"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipAbdominales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Abdominales"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipGluteos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Glúteos"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipPiernas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Piernas"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chipTodoCuerpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_chip_selected"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:text="Todo el cuerpo"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <!-- DIAGRAMAS DE CUERPO -->
+        <LinearLayout
+            android:id="@+id/contenedorDiagramas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/contenedorChips"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- FRENTE -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="240dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/body_silhouette_front"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayHombroFrente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_hombro"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayPecho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_pecho"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayBrazoFrente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_brazo"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayAbdominales"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_abdominales"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayPiernasFrente"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_piernas"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+            </FrameLayout>
+
+            <!-- ESPALDA -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="240dp"
+                android:layout_marginStart="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/body_silhouette_front"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayHombroEspalda"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_hombro"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayEspalda"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_espalda"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayBrazoEspalda"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_brazo"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayGluteos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_gluteos"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+                <ImageView
+                    android:id="@+id/overlayPiernasEspalda"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/overlay_piernas"
+                    android:visibility="invisible"
+                    android:contentDescription="@null"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSiguiente"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Siguiente"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            app:backgroundTint="#FF6B00"
+            app:cornerRadius="18dp"
+            app:layout_constraintTop_toBottomOf="@id/contenedorDiagramas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

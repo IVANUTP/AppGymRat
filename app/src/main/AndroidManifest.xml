@@ -61,6 +61,8 @@
             android:exported="false"/>
         <activity android:name=".Activities.PreguntaSexoActivity"
             android:exported="false"/>
+        <activity android:name=".Activities.SeleccionMusculosActivity"
+            android:exported="false"/>
 
     </application>
 

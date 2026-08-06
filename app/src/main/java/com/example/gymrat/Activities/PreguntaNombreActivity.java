@@ -40,7 +40,7 @@ public class PreguntaNombreActivity extends BaseActivity {
             String nombre = edtNombre.getText().toString().trim();
             EncuestaData.getInstancia().setNombre(nombre);
 
-            Intent intent = new Intent(PreguntaNombreActivity.this, PreguntaExperienciaActivity.class);
+            Intent intent = new Intent(PreguntaNombreActivity.this, PreguntaSexoActivity.class);
             startActivity(intent);
         });
     }
